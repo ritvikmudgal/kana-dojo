@@ -74,7 +74,7 @@ Store it in Vercel as `GITHUB_PAT` for Production.
 
 ### DeepSeek
 
-Create an API key and store it as `DEEPSEEK_API_KEY`.
+The API key has been added to Vercel Production as `DEEPSEEK_API_KEY`.
 
 Optional model override:
 
@@ -108,7 +108,7 @@ CRON_SECRET
 GITHUB_PAT
 ```
 
-This Production var is still required:
+This Production var has been added:
 
 ```txt
 DEEPSEEK_API_KEY
@@ -151,7 +151,6 @@ Authorization: Bearer <TALLY_WEBHOOK_TOKEN>
 
 These steps cannot be completed from this terminal without account-specific secrets or browser authorization:
 
-- DeepSeek API key: must be created in the DeepSeek dashboard.
 - Tally webhook: must be configured inside the Tally form dashboard.
 
 Everything that can be made repeatable in this repo has been moved into `supabase/migrations/20260618190346_bug_report_pipeline.sql`.
@@ -296,8 +295,8 @@ The source section includes the Supabase report ID and Tally submission ID so ma
 - [x] Add Production Vercel env vars available from terminal.
 - [x] Reuse existing Production `GITHUB_PAT`.
 - [x] Pull Production Vercel env vars into ignored `.env.local`.
-- [ ] Add `DEEPSEEK_API_KEY` to Vercel Production.
-- [ ] Deploy to Production after `DEEPSEEK_API_KEY` is set.
+- [x] Add `DEEPSEEK_API_KEY` to Vercel Production.
+- [ ] Deploy to Production with the new env vars.
 - [ ] Submit one Tally report without an attachment.
 - [ ] Confirm a `bug_reports` row is created.
 - [ ] Confirm a GitHub issue is created.
